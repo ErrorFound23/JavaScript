@@ -32,14 +32,33 @@ const myFunction = function(){
 }
 // myFunction();
 
-console.log(typeof score);
-console.log(typeof scoreValue);
-console.log(typeof isLoggedIn);
-console.log(typeof outsideTemp);
-console.log(typeof userEmail);
-console.log(typeof id);
-console.log(typeof bigNumber);
-console.log(typeof heros);
-console.log(typeof myObj);
-console.log(typeof myFunction);
+// console.log(typeof score);
+// console.log(typeof scoreValue);
+// console.log(typeof isLoggedIn);
+// console.log(typeof outsideTemp);
+// console.log(typeof userEmail);
+// console.log(typeof id);
+// console.log(typeof bigNumber);
+// console.log(typeof heros);
+// console.log(typeof myObj);
+// console.log(typeof myFunction);
 
+// stack (Primitive) => return Copy Heap (Non-Primitive) => return reference
+
+let myName = "Yash";
+let anotherName = myName;
+anotherName = "Noddy";
+
+console.log(myName);
+console.log(anotherName);
+
+const userOne = {
+    email: "yash@420.com",
+    upi: "user@ybl"
+}
+
+const userTwo = userOne;
+userTwo.email = "noddy@420.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);

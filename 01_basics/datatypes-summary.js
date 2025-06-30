@@ -43,7 +43,7 @@ const myFunction = function(){
 // console.log(typeof myObj);
 // console.log(typeof myFunction);
 
-// stack (Primitive) => return Copy Heap (Non-Primitive) => return reference
+// stack (Primitive) => return Copy, Heap (Non-Primitive) => return reference
 
 let myName = "Yash";
 let anotherName = myName;

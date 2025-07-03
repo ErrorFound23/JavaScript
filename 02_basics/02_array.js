@@ -6,7 +6,7 @@ const dc_heros = ["Superman", "Batman", "Flash", "Green Lantern", "wonder Woman"
 // console.log(marvel_heros[5][4]);
 
 // contact
-// const heros = marvel_heros.concat(dc_heros) // contact more than one array and return new combine array
+// const heros = marvel_heros.concat(dc_heros) // concat more than one array and return new combine array
 // console.log(heros);
 
 // spread opt

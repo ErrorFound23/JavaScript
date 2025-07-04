@@ -54,15 +54,30 @@ const user = [
     },
 ]
 
-console.log(user[0].email);
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // get all keys from object tinderUser as array
-console.log(Object.values(tinderUser)); // get all values from object tinderUser as array
-console.log(Object.entries(tinderUser)); // get all keys and values from object tinderUser as nested array
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // return true if key exist in object
-console.log(tinderUser.hasOwnProperty('isLoggedOut')); // return false if key does't exist in object
+// console.log(user[0].email);
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // get all keys from object tinderUser as array
+// console.log(Object.values(tinderUser)); // get all values from object tinderUser as array
+// console.log(Object.entries(tinderUser)); // get all keys and values from object tinderUser as nested array
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // return true if key exist in object
+// console.log(tinderUser.hasOwnProperty('isLoggedOut')); // return false if key does't exist in object
 
+const course = {
+  coursename: "Js in hindi",
+  price: 999,
+  courseInstructor: "Hitesh"
+}
 
+course.coursename // insead of
+course.price
+course.courseInstructor 
+const {coursename, price, courseInstructor: instructor} = course // use this 
 
+console.log(instructor)
 
+// {
+//   "name": "hitesh",
+//   "coursename": "Js in hindi",
+//   "price": "free"
+// }
 

@@ -1,0 +1,34 @@
+Javascript Execution Context
+
+{} => Global Execution Context(this)
+      Fuction Execution Context
+      Eval Execution Context (like mongoose)
+
+Javascript Execution Context Divided in to Two Phase:
+
+1. Memory Creation Phase / Creation Phase
+2. Execution Phase
+
+Example:
+
+let val1 = 10;
+let val2 = 5;
+
+function addNum(num1, num2) {
+    let total = num1 + num2;
+    return total
+}
+
+let result1 = addNum(val1, val2);
+let result2 = addNum(10, 3);
+
+Working of memory Creation   
+
+1. Memory Creation Phase                          2. Execution Phase
+
+val1 - undefined                                  val1 - 10  
+val2 - undefined                                  val2 - 5
+addNum - defination                               addNum ----------->      MCP                   EP      
+result1 - undefined                                                     val1 - undefined     num1 - 10
+result2 - undefined                                                     val2 - undefined     num2 -  5
+                                                                        total - undefined    total - 15

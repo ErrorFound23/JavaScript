@@ -43,7 +43,7 @@ if (true)
 // console.log(username); 
 
 // ++++++++++++++++++++++++++ Interesting ++++++++++++++++++++++++++
-
+// hoisting
 console.log(addOne(5)) // successfully execute
 function addOne(num) {
     return num + 1;

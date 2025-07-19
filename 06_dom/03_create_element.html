@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "main"
+        div.id = Math.round(Math.random() * 10 + 1)
+        div.setAttribute("title", "generate title") // preferable not override value or direcly set value
+        div.style.backgroundColor = "green"
+        div.style.padding = "10px" 
+        // div.innerText = "Hello world" // override values , not recommended
+        const addText = document.createTextNode("Hello world")
+        div.appendChild(addText)
+
+        document.body.appendChild(div) // use appenChild to display element on webpage
+    </script>
+</body>
+</html>

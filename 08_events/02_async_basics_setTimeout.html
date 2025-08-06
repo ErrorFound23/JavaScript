@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="stop">Stop</button>
+    <script>
+      // javascript(default behaviour)
+
+      // synchronous
+      // single threaded
+      // but its provide multi thread functionality  when we work with browser , nodejs and denojs environment by using task queue
+
+      //   DOM API
+      const name = function () {
+        console.log("Yash");
+      };
+      const changeText = function () {
+        document.querySelector("h1").innerHTML = "best JS series";
+      };
+
+      // hold setTimeout
+      const changeMe = setTimeout(changeText, 2000);
+
+      //  stop execution of changeMe
+      document.querySelector("#stop").addEventListener("click", function (e) {
+        // reference
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+      });
+    </script>
+  </body>
+</html>

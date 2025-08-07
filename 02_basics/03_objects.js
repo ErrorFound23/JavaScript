@@ -38,6 +38,19 @@ jsUser.greetingTwo = function() {
 jsUser.greeting()
 jsUser.greetingTwo()
 
+const obj = {
+  name: "yash",
+  greet: function() {
+    console.log("Hello, ", this.name);
+    
+  }
+}
+
+const greet = obj.greet;
+obj.greet() //  Hello, yash -> here, this.name refere current object name 
+greet() // Hello, undefined -> here, this.name refere window object or global object in node 
 
 
-
+// Solutions
+// 1. const greet = obj.greet.bind(obj);
+// 2. console.log("Hello, ", obj.name); // Explicitly reference obj object

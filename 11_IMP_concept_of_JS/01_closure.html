@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexical scope and closures</title>
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </head>
+  <body style="background-color: #313131">
+    <script>
+      function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName; // outer function share its whole lexical scope, not only executional context
+      }
+
+      const myFunc = makeFunc();
+      myFunc();
+
+      //   share memory to inner function
+      //   function outer() {
+      //     let username = "hitesh";
+      //     console.log(secret);
+
+      //     function inner() {
+      //       let secret = "my123";
+      //       console.log("inner", username);
+      //     }
+
+      //     function innerTwo() {
+      //       console.log("innerTwo", username);
+      //       console.log(secret);
+      //     }
+      //     inner();
+      //     innerTwo();
+      //   }
+      //   outer();
+      //   console.log("outer", username);
+    </script>
+
+    <script>
+      //  document.getElementById('orange').onclick = function() {
+      //     document.body.style.backgroundColor = `orange`
+      //  }
+      //  document.getElementById('green').onclick = function() {
+      //     document.body.style.backgroundColor = `green`
+      //  }
+
+      //clickHandler function execute or call immediatly when page load
+      function clickHandler(color) {
+        // change background immediatly when page load
+        // document.body.style.backgroundColor = `${color}`;
+
+        // execute when call a return function unlike clickHandler function execute or call immediatly when page load
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+
+      //  here, onclick event store return function and  execute or call when we click on button
+      document.getElementById("green").onclick = clickHandler("green");
+      document.getElementById("orange").onclick = clickHandler("orange");
+    </script>
+  </body>
+</html>

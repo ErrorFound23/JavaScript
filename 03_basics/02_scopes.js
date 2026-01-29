@@ -55,3 +55,4 @@ const addTwo = function(num) {
     return num + 2;
 }
 
+// hoisting is a default JavaScript behavior where variable and function declarations are processed and put into memory during the compilation phase, before the code is executed line by line.

@@ -44,12 +44,13 @@ if (true)
 
 // ++++++++++++++++++++++++++ Interesting ++++++++++++++++++++++++++
 // hoisting
-console.log(addOne(5)) // successfully execute
+// Fuction Declaration
+console.log(addOne(5)) // successfully execute 
 function addOne(num) {
     return num + 1;
 }
 
-
+// Function Expression
 console.log(addTwo(5)); // Throw an error
 const addTwo = function(num) {
     return num + 2;
